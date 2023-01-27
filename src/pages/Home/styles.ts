@@ -153,6 +153,10 @@ export const PostCardContent = styled.div`
   background: ${({ theme }) => theme["base-post"]};
 
   border-radius: 10px;
+
+  a {
+    text-decoration: none;
+  }
 `;
 
 export const PostCardContentTitle = styled.div`
