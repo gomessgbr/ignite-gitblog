@@ -141,7 +141,6 @@ export const PostCardsContainer = styled.div`
   margin-top: 3rem;
   margin-bottom: 14.625rem;
   gap: 2rem;
-  max-height: 16.25rem;
 `;
 
 export const PostCardContent = styled.div`
