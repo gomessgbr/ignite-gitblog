@@ -71,8 +71,8 @@ export function Home() {
       </SearchInputContainer>
 
       <PostCardsContainer>
-        <Link to="Post" title="Post">
-          <PostCardContent>
+        <PostCardContent>
+          <Link to="Post" title="Post">
             <PostCardContentTitle>
               <div style={{ maxWidth: "17.69rem" }}>
                 <h1>JavaScript data types and data structures</h1>
@@ -87,8 +87,8 @@ export function Home() {
                 attempts to list the built-in data structures available in...{" "}
               </p>
             </PostCardContentSubTitle>
-          </PostCardContent>
-        </Link>
+          </Link>
+        </PostCardContent>
 
         <PostCardContent>
           <PostCardContentTitle>
