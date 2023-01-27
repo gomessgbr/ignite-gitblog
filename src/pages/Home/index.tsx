@@ -21,6 +21,7 @@ import {
   faArrowUpRightFromSquare,
 } from "@fortawesome/free-solid-svg-icons";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { Link } from "react-router-dom";
 
 import ProfileImage from "../../assets/avatar.png";
 
@@ -33,7 +34,7 @@ export function Home() {
           <HomeProfileTitle>
             <h1>Cameron Williamson</h1>
             <span>
-              github <a href=""></a>
+              github
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </span>
           </HomeProfileTitle>
@@ -70,22 +71,25 @@ export function Home() {
       </SearchInputContainer>
 
       <PostCardsContainer>
-        <PostCardContent>
-          <PostCardContentTitle>
-            <div style={{ maxWidth: "17.69rem" }}>
-              <h1>JavaScript data types and data structures</h1>
-            </div>
+        <Link to="Post" title="Post">
+          <PostCardContent>
+            <PostCardContentTitle>
+              <div style={{ maxWidth: "17.69rem" }}>
+                <h1>JavaScript data types and data structures</h1>
+              </div>
 
-            <span>Há 1 dia</span>
-          </PostCardContentTitle>
-          <PostCardContentSubTitle>
-            <p>
-              Programming languages all have built-in data structures, but these
-              often differ from one language to another. This article attempts
-              to list the built-in data structures available in...{" "}
-            </p>
-          </PostCardContentSubTitle>
-        </PostCardContent>
+              <span>Há 1 dia</span>
+            </PostCardContentTitle>
+            <PostCardContentSubTitle>
+              <p>
+                Programming languages all have built-in data structures, but
+                these often differ from one language to another. This article
+                attempts to list the built-in data structures available in...{" "}
+              </p>
+            </PostCardContentSubTitle>
+          </PostCardContent>
+        </Link>
+
         <PostCardContent>
           <PostCardContentTitle>
             <div style={{ maxWidth: "17.69rem" }}>
