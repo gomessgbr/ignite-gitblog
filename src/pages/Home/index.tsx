@@ -34,7 +34,7 @@ export function Home() {
           <HomeProfileTitle>
             <h1>Cameron Williamson</h1>
             <span>
-              github
+              github{"    "}
               <FontAwesomeIcon icon={faArrowUpRightFromSquare} />
             </span>
           </HomeProfileTitle>
