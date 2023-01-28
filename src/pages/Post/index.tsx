@@ -86,15 +86,6 @@ export function Post() {
               type, and any variable can be assigned (and re-assigned) values of
               all types:
             </p>
-
-            {/* <p>
-              ```javascript 
-              let foo = 42; // foo is now a number 
-              foo = ‘bar’; //foo is now a string 
-              foo = true; // foo is now a boolean 
-              
-              ```
-            </p> */}
           </PostContent>
         </PostContentWrapper>
       </PostContainer>
