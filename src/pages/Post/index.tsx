@@ -18,6 +18,7 @@ import {
 } from "./styles";
 
 export function Post() {
+  console.log("Teste");
   return (
     <div>
       <PostContainer>
