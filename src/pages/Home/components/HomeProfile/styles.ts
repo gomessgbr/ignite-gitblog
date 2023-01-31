@@ -14,15 +14,19 @@ export const HomeProfileContainer = styled.div`
   border-radius: 10px;
   background: ${({ theme }) => theme["base-profile"]};
   color: ${({ theme }) => theme.white};
-
-  img {
-    margin: 2rem 2rem 2rem 2.5rem;
-  }
 `;
 
 export const HomeProfileWrapper = styled.div`
   display: flex;
   flex-direction: column;
+`;
+
+export const ImageProfile = styled.img`
+  display: block;
+  max-width: 9.25rem;
+  max-height: 9.25rem;
+
+  margin: 2rem 2rem 2rem 2.5rem;
 `;
 
 export const HomeProfileTitle = styled.div`
@@ -37,7 +41,8 @@ export const HomeProfileTitle = styled.div`
     font-size: 1.5rem;
     margin-bottom: 0.5rem;
   }
-  span {
+  a {
+    text-decoration: none;
     color: ${({ theme }) => theme.blue};
     text-transform: uppercase;
     font-weight: 700;
@@ -66,8 +71,7 @@ export const FooterSubtitleIcons = styled.div`
   flex-direction: row;
   gap: 1.5rem;
 
-  a {
-    text-decoration: none;
+  span {
     color: ${({ theme }) => theme["base-subtitle"]};
     font-weight: 400;
     font-size: 1rem;
