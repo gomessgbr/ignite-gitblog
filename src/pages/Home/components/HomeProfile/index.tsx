@@ -96,7 +96,7 @@ export function HomeProfile() {
                       </div>
                       <div>
                         <FontAwesomeIcon icon={faUserGroup} />
-                        <span> {followers}</span>
+                        <span> {followers} seguidores</span>
                       </div>
                     </FooterSubtitleIcons>
                   </HomeProfileSubtitle>
