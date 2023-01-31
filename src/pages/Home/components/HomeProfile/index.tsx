@@ -73,6 +73,7 @@ export function HomeProfile() {
                   justifyContent: "space-evenly",
                   width: "100%",
                 }}
+                key={profileTag}
               >
                 <ImageProfile src={avatar} alt="Imagem do perfil" />
                 <HomeProfileWrapper>
