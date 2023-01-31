@@ -34,8 +34,7 @@ export const PostCardContentTitle = styled.div`
   }
 
   span {
-    width: 4rem;
-
+    width: 5rem;
     font-weight: 400;
     font-size: 0.875rem;
     line-height: 160%;
