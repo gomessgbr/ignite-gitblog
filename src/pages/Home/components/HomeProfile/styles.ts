@@ -3,9 +3,9 @@ import styled from "styled-components";
 export const HomeProfileContainer = styled.div`
   display: flex;
   flex-direction: row;
-  width: 100%;
+
   height: 13.25rem;
-  max-width: 54rem;
+  width: 54rem;
 
   align-items: center;
   justify-content: center;
@@ -23,8 +23,8 @@ export const HomeProfileWrapper = styled.div`
 
 export const ImageProfile = styled.img`
   display: block;
-  max-width: 9.25rem;
-  max-height: 9.25rem;
+  width: 9.25rem;
+  height: 9.25rem;
 
   margin: 2rem 2rem 2rem 2.5rem;
 `;
