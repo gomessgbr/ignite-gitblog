@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import ReactMarkdown from "react-markdown";
 
 export const PostContainer = styled.div`
   display: flex;
@@ -80,10 +81,13 @@ export const PostContentWrapper = styled.div`
 
 export const PostContent = styled.div`
   padding: 2.5rem 2rem;
-  p {
-    color: ${({ theme }) => theme["base-text"]};
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 160%;
-  }
+  /* p {
+  } */
+`;
+
+export const PostContentBody = styled(ReactMarkdown)`
+  color: ${({ theme }) => theme["base-text"]};
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 160%;
 `;

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { api } from "../../lib/axios";
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub } from "@fortawesome/free-brands-svg-icons";
 import {
@@ -17,6 +18,7 @@ import {
   PostTitleFooterIconsWrapper,
   PostTitleContentWrapper,
   PostContent,
+  PostContentBody,
 } from "./styles";
 
 interface IPostContent {
@@ -106,7 +108,7 @@ export function Post() {
               </PostTitleWrapper>
               <PostContentWrapper>
                 <PostContent>
-                  <p>{content.content}</p>
+                  <PostContentBody>{content.content}</PostContentBody>
                 </PostContent>
               </PostContentWrapper>
             </PostContainer>
