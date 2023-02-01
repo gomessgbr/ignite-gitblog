@@ -1,3 +1,4 @@
+import { ReactMarkdown } from "react-markdown/lib/react-markdown";
 import styled from "styled-components";
 
 export const PostCardContent = styled.div`
@@ -41,10 +42,11 @@ export const PostCardContentTitle = styled.div`
 export const PostCardContentSubTitle = styled.div`
   max-height: 7rem;
   overflow-y: hidden;
-  p {
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 160%;
-    color: ${({ theme }) => theme["base-text"]};
-  }
+`;
+
+export const PostCardContentBody = styled(ReactMarkdown)`
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 160%;
+  color: ${({ theme }) => theme["base-text"]};
 `;

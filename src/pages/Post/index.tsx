@@ -94,7 +94,7 @@ export function Post() {
                     <div>
                       <span>
                         <FontAwesomeIcon icon={faCalendarDay} />
-                        {state.updated_at}
+                        {state.created_at}
                       </span>
                     </div>
                     <div>
