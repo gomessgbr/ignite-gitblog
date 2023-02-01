@@ -13,4 +13,8 @@ export const PostCardsContainer = styled.div`
   margin-top: 3rem;
   margin-bottom: 14.625rem;
   gap: 2rem;
+
+  a {
+    text-decoration: none;
+  }
 `;
