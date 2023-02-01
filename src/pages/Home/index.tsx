@@ -4,63 +4,39 @@ import { HomeProfile } from "./components/HomeProfile";
 import { Search } from "./components/Search";
 import { PostCards } from "./components/PostCards";
 import { api } from "../../lib/axios";
-import { useEffect, useState } from "react";
-
-import { formatDistanceToNow } from "date-fns";
-import { ptBR } from "date-fns/locale";
+import { ChangeEvent, useEffect, useState } from "react";
+import { ConvertDate } from "../../utils/convertDate";
 
 interface IPost {
   title: string;
   number: number;
   body: string;
-  updated_at: string;
+  created_at: string;
 }
 [];
 
 export function Home() {
   const [posts, setPosts] = useState<IPost[]>([]);
+  const [query, setQuery] = useState("");
 
   async function fetchPosts() {
-    const response = await api.get("/search/issues", {
-      params: {
-        q: "repo:gomessgbr/ignite-gitblog",
-      },
-    });
-
-    const responseDatas = response.data.items;
-
-    const postDatas: IPost[] = [];
-
-    responseDatas.map(
-      (post: {
-        title: string;
-        number: number;
-        body: string;
-        updated_at: string;
-      }) => {
-        const dateToDate = new Date(post.updated_at);
-        const convertDate = formatDistanceToNow(dateToDate, {
-          locale: ptBR,
-          addSuffix: true,
-        });
-
-        const fetchDatas = {
-          title: post.title,
-          number: post.number,
-          body: post.body,
-          updated_at: convertDate,
-        };
-
-        return postDatas.push({ ...fetchDatas });
-      }
+    const response = await api.get(
+      `search/issues?q=${
+        query ? query : ""
+      }%20repo:${"gomessgbr"}/ignite-gitblog`
     );
 
-    setPosts(postDatas);
+    setPosts(response.data.items);
   }
 
   useEffect(() => {
     fetchPosts();
-  }, []);
+  }, [query]);
+
+  function onChangeSearch(e: ChangeEvent<HTMLInputElement>) {
+    setQuery(e.target.value);
+    fetchPosts();
+  }
 
   let countPosts = posts.length;
 
@@ -68,6 +44,13 @@ export function Home() {
     <HomeContainer>
       <HomeProfile />
       <Search amountOfPosts={countPosts} />
+      {/* <input
+        type="search"
+        name=""
+        id=""
+        value={query}
+        onChange={onChangeSearch}
+      /> */}
       <PostCardsContainer>
         {posts.map((post) => {
           return (
@@ -76,7 +59,7 @@ export function Home() {
               titlePost={post.title}
               bodyPost={post.body}
               numberPost={post.number}
-              updated_at={post.updated_at}
+              created_at={ConvertDate(post.created_at)}
             />
           );
         })}
