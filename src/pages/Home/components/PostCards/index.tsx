@@ -20,15 +20,9 @@ export function PostCards({
   numberPost,
   updated_at,
 }: PostCardProps) {
-  async function sendtoPostPage() {
-    const response = await api.get(
-      `/repos/gomessgbr/ignite-gitblog/issues/${numberPost}`
-    );
-  }
-
   return (
-    <PostCardContent>
-      <Link to="Post" title="Post" onClick={sendtoPostPage}>
+    <Link to={`/Post/${numberPost}`} title="Post" state={{ updated_at }}>
+      <PostCardContent>
         <PostCardContentTitle>
           <div style={{ width: "17.69rem" }}>
             <h1>{titlePost}</h1>
@@ -39,7 +33,7 @@ export function PostCards({
         <PostCardContentSubTitle>
           <p>{bodyPost}</p>
         </PostCardContentSubTitle>
-      </Link>
-    </PostCardContent>
+      </PostCardContent>
+    </Link>
   );
 }
