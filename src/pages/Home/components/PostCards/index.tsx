@@ -1,5 +1,6 @@
 import {
   PostCardContent,
+  PostCardContentBody,
   PostCardContentSubTitle,
   PostCardContentTitle,
 } from "./styles";
@@ -11,29 +12,29 @@ interface PostCardProps {
   titlePost: string;
   bodyPost: string;
   numberPost: number;
-  updated_at: string;
+  created_at: string;
 }
 
 export function PostCards({
   titlePost,
   bodyPost,
   numberPost,
-  updated_at,
+  created_at,
 }: PostCardProps) {
   return (
-    <Link to={`/Post/${numberPost}`} title="Post" state={{ updated_at }}>
-      <PostCardContent>
+    <PostCardContent>
+      <Link to={`/Post/${numberPost}`} title="Post" state={{ created_at }}>
         <PostCardContentTitle>
           <div style={{ width: "17.69rem" }}>
             <h1>{titlePost}</h1>
           </div>
 
-          <span>{updated_at}</span>
+          <span>{created_at}</span>
         </PostCardContentTitle>
-        <PostCardContentSubTitle>
-          <p>{bodyPost}</p>
-        </PostCardContentSubTitle>
-      </PostCardContent>
-    </Link>
+      </Link>
+      <PostCardContentSubTitle>
+        <PostCardContentBody>{bodyPost}</PostCardContentBody>
+      </PostCardContentSubTitle>
+    </PostCardContent>
   );
 }
