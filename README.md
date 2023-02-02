@@ -24,3 +24,9 @@ Alguns conceitos colocados em prática nesse projetos
 ## ScreenShot
 
 [](public/gitblogScreenShot.png)
+
+## Como rodar o projeto
+
+- Clone o projeto `git clone https://github.com/gomessgbr/ignite-gitblog.git`
+- Dentro da raiz do projeto instale-o `yarn ` ou `npm install`
+- Execute o proejto ` npm run dev` `yarn dev`
